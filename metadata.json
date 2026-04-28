@@ -1,0 +1,6 @@
+{
+  "name": "Vintage Flash Photobooth",
+  "description": "A classic vintage-style photobooth that captures a 3-photo strip and creates a 30-second replay of your session with retro music.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": []
+}

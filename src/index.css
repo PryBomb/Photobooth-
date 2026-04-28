@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Satisfy&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-countdown: "Satisfy", cursive;
+
+  --color-minimal-bg: #fdfdfd;
+  --color-minimal-ink: #111111;
+  --color-minimal-border: #e8e8e8;
+  
+  --animate-spin-slow: spin 8s linear infinite;
+  --animate-shutter: shutter 0.15s ease-out;
+}
+
+@layer utilities {
+  .filter-bryant {
+    filter: grayscale(100%) contrast(1.4) brightness(1.1) saturate(0);
+  }
+  .filter-noir {
+    filter: grayscale(100%) contrast(1.8) brightness(0.9);
+  }
+  .filter-sepia {
+    filter: sepia(0.8) contrast(1.1) brightness(1.0) saturate(0.8);
+  }
+  .filter-natural {
+    filter: contrast(1.05) saturate(1.1);
+  }
+}
+
+@theme {
+  --font-countdown: "JetBrains Mono", monospace;
+}
+
+@keyframes shutter {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@layer base {
+  body {
+    @apply bg-minimal-bg text-minimal-ink antialiased overflow-x-hidden;
+  }
+}
